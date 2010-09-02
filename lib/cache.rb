@@ -21,8 +21,10 @@ class Cache
     latest_data = find(system_num)
     if latest_data != data
       save_new_revision(data, system_num)
+      :updated
+    else
+      :unchanged
     end
-    true
   end
   
   # Saves +data+ to the cache

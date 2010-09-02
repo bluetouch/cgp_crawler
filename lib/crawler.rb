@@ -18,10 +18,22 @@ class Crawler
       sleep(delay)
       record = @connection.find_by_system_number(system_num)
       xml = self.class.record_to_xml(record)
-      puts "%09i %s" % [system_num, record ? "+" : "-"] unless quiet
-      @cache.save(xml, system_num)
+      status = @cache.save(xml, system_num)
+      log(system_num, record, status) unless quiet
       record
     end
+  end
+  
+  def log(system_num, record, status)
+    status_code = case status
+    when :updated   then '+'
+    when :unchanged then '0'
+    end
+    puts "%09i %s %s" % [
+      system_num,
+      record ? "o" : "x",
+      status_code
+    ]
   end
 
   def self.record_to_xml(record)
