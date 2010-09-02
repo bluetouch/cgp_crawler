@@ -1,0 +1,5 @@
+address: Z3950.some.access.point
+port: 1234
+database: DATABASE
+username: USERNAME
+password: password
