@@ -8,7 +8,7 @@ desc "crawl CGP records, save to #{CACHE_PATH}"
 task :crawl do
   require File.dirname(__FILE__) + "/lib/crawler"
   crawler = Crawler.new(CACHE_PATH)
-  crawler.run(:initial_max => 100, :grow_by => 100, :delay => 0.1)
+  crawler.run(:initial_max => 100, :grow_by => 100, :delay => 1)
 end
 
 desc "run all specs"
