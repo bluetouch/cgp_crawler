@@ -8,8 +8,9 @@ module Cgp
     # can change over time, as explained below.
     #
     # The loop repeats until a termination condition is met:
-    #   1. an exception is raised
+    #   1. the yield block calls `break`
     #   2. max_iterations are reached, if specified
+    #   3. an exception is raised
     #
     # An intended use case is to allow the cycle to repeat indefinitely.
     #
