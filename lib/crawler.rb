@@ -15,12 +15,18 @@ module Cgp
       options[:grow_by]     ||= 100
       quiet = options.delete(:quiet)
       delay = options.delete(:delay) || 1
+      interrupted = false
+      trap("INT") { interrupted = true }
       Utility.cycle(options) do |system_num|
         sleep(delay)
         record = @connection.find_by_system_number(system_num)
         xml = self.class.record_to_xml(record)
         status = @cache.save(xml, system_num)
         log(system_num, record, status) unless quiet
+        if interrupted
+          puts "INT signal detected. Halting." unless quiet
+          break
+        end
         record
       end
     end
