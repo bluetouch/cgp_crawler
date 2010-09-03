@@ -6,7 +6,7 @@ This code crawls the Catalog of Government Publications (CGP) using a protocol c
 
 The Catalog of Government Publications is a collection of all federal publications, administered by the [Government Printing Office](http://www.gpo.gov). The CGP includes descriptive records and links to those available online.
 
-There is a [Web search interface](http://catalog.gpo.gov) for the CGP. However, as of this writing, there is not an easy way to get bulk access to the CGP. That's we (of the Sunlight Foundation) are crawling the CGP and making the bulk data available.
+There is a [Web search interface](http://catalog.gpo.gov) for the CGP. However, as of this writing, there is not an easy way to get bulk access to the CGP. That's why we (the Sunlight Foundation) are crawling the CGP and making the bulk data available.
 
 ## Prerequisites
 
@@ -56,4 +56,4 @@ Now what do you do with these hundreds of thousands of government documents? We 
 
 This is a project of the [Sunlight Labs](http://sunlightlabs.com), the technical arm of the [Sunlight Foundation](http://sunlightfoundation.com). If you would like to to discuss the project or anything related to government transparency, please contact us on our [mailing list](http://groups.google.com/group/sunlightlabs).
 
-This code was written by [David James](http://sunlightfoundation.com/people/djames/) of the Sunlight Labs. [Ed Summers](http://inkdroid.org/journal/about/) offered help (and consolation ) regarding Z39.50 and MARC. The idea for putting the CGP bulk data online originated from [John Wonderlich](http://sunlightfoundation.com/people/jwonderlich/) and [Daniel Schuman](http://sunlightfoundation.com/people/dschuman/), both on Sunlight's policy team.
+This code was written by [David James](http://sunlightfoundation.com/people/djames/) of the Sunlight Labs. [Ed Summers](http://inkdroid.org/journal/about/) offered help (and consolation) regarding Z39.50 and MARC. The idea for putting the CGP bulk data online originated from [John Wonderlich](http://sunlightfoundation.com/people/jwonderlich/) and [Daniel Schuman](http://sunlightfoundation.com/people/dschuman/), both on Sunlight's policy team.
