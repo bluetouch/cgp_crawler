@@ -18,6 +18,16 @@ task :crawl do
   })
 end
 
+BULK_DATA_README = File.join(CONFIG.cache_path, 'README.html')
+
+desc "Generate #{BULK_DATA_README}"
+task :readme do
+  require 'rdiscount'
+  input_filename = File.dirname(__FILE__) + '/doc/bulk_data.markdown'
+  markdown = RDiscount.new(File.read(input_filename))
+  File.open(BULK_DATA_README, "w") { |f| f.write(markdown.to_html) }
+end
+
 desc "run all specs"
 RSpec::Core::RakeTask.new(:spec) do |t|
   t.spec_opts = ["--color"]
