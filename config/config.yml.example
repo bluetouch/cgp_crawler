@@ -1,3 +1,8 @@
 # Note: cache_path is interpreted as a relative path from the root of the
 # project (e.g. the directory that contains Rakefile)
-cache_path: ../../www/cgp_data
+start_at:    0
+min:         0
+initial_max: 700000
+grow_by:     1000
+delay:       1.0
+cache_path:  "../../www/cgp_data"

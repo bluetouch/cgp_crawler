@@ -11,6 +11,8 @@ module Cgp
     end
 
     def run(options = {})
+      options[:start_at]    ||= 0
+      options[:min]         ||= 0
       options[:initial_max] ||= 100
       options[:grow_by]     ||= 100
       quiet = options.delete(:quiet)
