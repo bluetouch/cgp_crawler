@@ -1,16 +1,14 @@
 require 'rubygems'
 require 'bundler/setup'
 require 'rspec/core/rake_task'
+require File.dirname(__FILE__) + '/lib/config'
 
-CONFIG_FILE = File.join(File.dirname(__FILE__), 'config', 'config.yml')
-CONFIG = YAML.load_file(CONFIG_FILE)
-CACHE_PATH = File.expand_path(File.join(File.dirname(__FILE__),
-  CONFIG['cache_path']))
+CONFIG = Cgp::Config.new
 
-desc "crawl CGP records, save to #{CACHE_PATH}"
+desc "crawl CGP records, save to #{CONFIG.cache_path}"
 task :crawl do
   require File.dirname(__FILE__) + "/lib/crawler"
-  crawler = Crawler.new(CACHE_PATH)
+  crawler = Cgp::Crawler.new(CONFIG.cache_path)
   crawler.run(:initial_max => 100, :grow_by => 100, :delay => 1)
 end
 

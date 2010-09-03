@@ -1,7 +1,7 @@
 require File.dirname(__FILE__) + "/spec_helper"
 require File.expand_path(File.dirname(__FILE__) + "/../lib/utility")
 
-describe Utility do
+describe "Utility" do
   
   describe "cycle" do
     before do
@@ -12,7 +12,7 @@ describe Utility do
       options = {
         :max_iterations => 5
       }
-      Utility.cycle(options) do |x|
+      Cgp::Utility.cycle(options) do |x|
         @yields << x
         false
       end
@@ -25,7 +25,7 @@ describe Utility do
         :grow_by        => 1,
         :initial_max    => 2
       }
-      Utility.cycle(options) do |x|
+      Cgp::Utility.cycle(options) do |x|
         @yields << x
         false
       end
@@ -38,7 +38,7 @@ describe Utility do
         :grow_by        => 2,
         :initial_max    => 2
       }
-      Utility.cycle(options) do |x|
+      Cgp::Utility.cycle(options) do |x|
         @yields << x
         x == 1
       end
@@ -51,7 +51,7 @@ describe Utility do
         :grow_by        => 2,
         :initial_max    => 2
       }
-      Utility.cycle(options) do |x|
+      Cgp::Utility.cycle(options) do |x|
         @yields << x
         x == 3
       end
@@ -64,7 +64,7 @@ describe Utility do
         :grow_by        => 2,
         :initial_max    => 2
       }
-      Utility.cycle(options) do |x|
+      Cgp::Utility.cycle(options) do |x|
         @yields << x
         x == 1 || x == 3
       end

@@ -1,12 +1,12 @@
 require File.dirname(__FILE__) + "/spec_helper"
 require File.expand_path(File.dirname(__FILE__) + "/../lib/cache")
 
-describe Cache do
+describe "Cache" do
 
   before do
     @base_path = File.expand_path(File.join(File.dirname(__FILE__),
       '..', 'tmp', 'cache'))
-    @cache = Cache.new(@base_path)
+    @cache = Cgp::Cache.new(@base_path)
     FileUtils.rm_rf(@base_path)
     filenames_and_content = {
       "#{@base_path}/001/110/001110555-000.xml" => "001110555-000",
