@@ -1,0 +1,3 @@
+# Note: cache_path is interpreted as a relative path from the root of the
+# project (e.g. the directory that contains Rakefile)
+cache_path: ../../www/cgp_data

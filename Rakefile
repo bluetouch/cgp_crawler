@@ -2,7 +2,10 @@ require 'rubygems'
 require 'bundler/setup'
 require 'rspec/core/rake_task'
 
-CACHE_PATH = File.expand_path(File.join(File.dirname(__FILE__), 'cache'))
+CONFIG_FILE = File.join(File.dirname(__FILE__), 'config', 'config.yml')
+CONFIG = YAML.load_file(CONFIG_FILE)
+CACHE_PATH = File.expand_path(File.join(File.dirname(__FILE__),
+  CONFIG['cache_path']))
 
 desc "crawl CGP records, save to #{CACHE_PATH}"
 task :crawl do
