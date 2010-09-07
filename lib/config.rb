@@ -22,7 +22,7 @@ module Cgp
       @min         = lookup('min',         Integer)
       @initial_max = lookup('initial_max', Integer)
       @grow_by     = lookup('grow_by',     Integer)
-      @delay       = lookup('delay',       Float)
+      @delay       = lookup('delay',       Numeric)
       _cache_path  = lookup('cache_path',  String)
       @cache_path  = File.expand_path(File.join(ROOT_DIR, _cache_path))
     end
