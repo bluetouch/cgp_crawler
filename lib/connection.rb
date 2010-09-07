@@ -5,11 +5,12 @@ module Cgp
   class Connection
 
     def initialize
-      path = File.expand_path(File.dirname(__FILE__) + "/../config/access.yml")
+      config_filename = File.expand_path(File.dirname(__FILE__) +
+        "/../config/access.yml")
       begin
-        access = YAML::load_file(path)
+        access = YAML::load_file(config_filename)
       rescue
-        raise "Access configuration file not found: #{CONFIG_FILE}"
+        raise "Access configuration file not found: #{config_filename}"
       end
       @connection = ZOOM::Connection.new
       @connection.database_name = access['database']
