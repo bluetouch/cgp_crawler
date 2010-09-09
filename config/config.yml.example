@@ -5,4 +5,4 @@ min:         0
 initial_max: 700000
 grow_by:     1000
 delay:       1.0
-cache_path:  "../../www/cgp_data"
+cache_path:  "../../www/cgp-data"
