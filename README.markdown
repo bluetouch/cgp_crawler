@@ -8,13 +8,13 @@ The Catalog of Government Publications is a collection of all federal publicatio
 
 There is a [web search interface](http://catalog.gpo.gov) for the CGP. However, to our knowledge, there is no public way to access the CGP in bulk. As a result, the public cannot run queries against the data unless they are built into the CGP web search interface.
 
-That's why we (the Sunlight Foundation) use this code to crawl the CGP and share the resulting [CGP bulk data](http://sunlightlabs.com/cgp_data) publicly.
+That's why we (the Sunlight Foundation) use this code to crawl the CGP and share the resulting [CGP bulk data](http://sunlightlabs.com/cgp-data) publicly.
 
 ## Access Credentials
 
 In order to run this code, you will need access credentials to access the CGP. Create a file called `config/access.yml` based on `access.yml.example`.
 
-Practically speaking, most people probably will not have direct access to the CGP. This is why we share the results of our crawl at [http://sunlightlabs.com/cgp_data](http://sunlightlabs.com/cgp_data).
+Practically speaking, most people probably will not have direct access to the CGP. This is why we share the results of our crawl at [http://sunlightlabs.com/cgp-data](http://sunlightlabs.com/cgp-data).
 
 ## Software Dependencies
 
